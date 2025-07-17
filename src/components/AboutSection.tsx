@@ -14,14 +14,12 @@ export function AboutSection() {
           {/* Image Side */}
           <div className="relative order-first lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
-              <div className="aspect-[4/5] bg-gradient-primary flex items-center justify-center">
-                <div className="text-center text-maria">
-                  <div className="w-24 h-24 rounded-full bg-maria/30 mx-auto mb-4 flex items-center justify-center">
-                    <Heart className="h-12 w-12 text-maria/80" />
-                  </div>
-                  <p className="text-lg font-medium">Fernanda Pinha</p>
-                  <p className="text-sm opacity-80">Psicóloga CRP 03/32557</p>
-                </div>
+              <div className="aspect-[4/5] overflow-hidden">
+                <img 
+                  src="/lovable-uploads/da809024-c1db-42c6-9e02-7451a68598e6.png" 
+                  alt="Fernanda Pinha - Psicóloga CRP 03/32557"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
