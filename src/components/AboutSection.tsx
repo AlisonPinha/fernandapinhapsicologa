@@ -1,0 +1,135 @@
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button-variants"
+import { cn } from "@/lib/utils"
+import { GraduationCap, Heart, Award, ArrowRight } from "lucide-react"
+
+export function AboutSection() {
+  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%20Fernanda%2C%20li%20sua%20hist%C3%B3ria%20e%20me%20identifiquei.%20Gostaria%20de%20conversar%20sobre%20minha%20situa%C3%A7%C3%A3o."
+
+  return (
+    <section id="sobre" className="py-20 bg-maria">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Image Side */}
+          <div className="relative">
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
+              <div className="aspect-[4/5] bg-gradient-primary flex items-center justify-center">
+                <div className="text-center text-maria">
+                  <div className="w-24 h-24 rounded-full bg-maria/30 mx-auto mb-4 flex items-center justify-center">
+                    <Heart className="h-12 w-12 text-maria/80" />
+                  </div>
+                  <p className="text-lg font-medium">Fernanda Pinha</p>
+                  <p className="text-sm opacity-80">Psicóloga CRP 03/32557</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Decorative cards */}
+            <Card className="absolute -top-4 -right-4 w-32 bg-maria/90 backdrop-blur border-rute/20">
+              <CardContent className="p-4 text-center">
+                <Award className="h-6 w-6 text-debora mx-auto mb-2" />
+                <div className="text-xs text-ester">TCC Especialista</div>
+              </CardContent>
+            </Card>
+            
+            <Card className="absolute -bottom-4 -left-4 w-32 bg-maria/90 backdrop-blur border-rute/20">
+              <CardContent className="p-4 text-center">
+                <div className="text-lg font-bold text-ester">200+</div>
+                <div className="text-xs text-ester/70">Pacientes</div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Content Side */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester leading-tight">
+                Então, quem é 
+                <span className="text-rute"> Fernanda</span> 
+                <span className="text-debora"> Psicóloga?</span>
+              </h2>
+
+              <div className="space-y-4 text-ester/80 leading-relaxed">
+                <p>
+                  <strong className="text-ester">História curta:</strong> Algumas pessoas escolhem a psicologia. 
+                  Outras são escolhidas pela missão de acolher o que o mundo insiste em quebrar.
+                </p>
+                
+                <p>
+                  Fernanda Pinha é essa segunda história.
+                </p>
+                
+                <p>
+                  Antes de ser psicóloga, ela já era refúgio: ouvia com o coração aberto, 
+                  ria com a alma leve, enxergava onde poucos conseguiam ver.
+                </p>
+                
+                <p>
+                  <strong className="text-rute">Fernanda acredita que cura não acontece apenas no discurso.</strong> 
+                  Cura se constrói no detalhe: no silêncio que acolhe, na escuta que respeita, 
+                  no olhar que não julga.
+                </p>
+              </div>
+            </div>
+
+            {/* Credentials */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Card className="border-rute/20 bg-gradient-soft">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <GraduationCap className="h-8 w-8 text-rute flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-ester">Formação</div>
+                    <div className="text-sm text-ester/70">Psicologia - UNIFACS</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-rute/20 bg-gradient-soft">
+                <CardContent className="p-4 flex items-center gap-3">
+                  <Award className="h-8 w-8 text-debora flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-ester">Especialização</div>
+                    <div className="text-sm text-ester/70">TCC - Grupo PBE</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Philosophy */}
+            <Card className="border-debora/20 bg-gradient-warm">
+              <CardContent className="p-6">
+                <h3 className="text-lg font-semibold text-ester mb-3">Minha filosofia</h3>
+                <p className="text-ester/80 italic">
+                  "Com formação sólida em Terapia Cognitivo-Comportamental e um coração 
+                  firmado na esperança que vem de Deus, abri espaço para mulheres feridas 
+                  se reconhecerem além da dor."
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(buttonVariants({ variant: "cta", size: "lg" }))}
+              >
+                Quero conhecer Fernanda
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+              
+              <a 
+                href="#como-ajudo"
+                className={cn(buttonVariants({ variant: "elegant", size: "lg" }))}
+              >
+                Ver como ela pode me ajudar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
