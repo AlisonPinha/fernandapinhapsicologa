@@ -61,7 +61,7 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
       <div className="bg-white rounded-2xl p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-900">
-            🧠 Vamos nos conhecer melhor antes de continuar?
+            Vamos nos conhecer melhor antes de continuar?
           </h2>
           <button
             onClick={onClose}
