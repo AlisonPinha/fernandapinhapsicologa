@@ -10,11 +10,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-rute/20 bg-maria/95 backdrop-blur supports-[backdrop-filter]:bg-maria/60">
       <div className="container flex h-14 md:h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="h-6 w-6 md:h-8 md:w-8 rounded-full bg-gradient-primary"></div>
-          <span className="font-serif text-lg md:text-xl font-bold text-ester">
-            Fernanda Pinha
-          </span>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/5332b9be-61bb-4346-accd-17b7d43dcd47.png" 
+            alt="Fernanda Pinha Psicóloga" 
+            className="h-8 md:h-10 w-auto"
+          />
         </div>
 
         {/* Navigation */}
