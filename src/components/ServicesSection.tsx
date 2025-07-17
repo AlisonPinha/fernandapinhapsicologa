@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { Heart, Brain, Users, Shield, ArrowRight } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function ServicesSection() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20como%20voc%C3%AA%20pode%20me%20ajudar%20com"
+  const { openModal } = useLeadCapture();
 
   const services = [
     {
@@ -62,15 +63,13 @@ export function ServicesSection() {
                     <h3 className="text-lg md:text-xl font-semibold text-ester">{service.title}</h3>
                     <p className="text-sm md:text-base text-ester/70 leading-relaxed">{service.description}</p>
                     
-                    <a 
-                      href={`${whatsappUrl}${service.whatsappText}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Button 
+                      onClick={openModal}
                       className={cn(buttonVariants({ variant: "soft", size: "sm" }), "w-full sm:w-auto")}
                     >
                       Quero ajuda com isso
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    </Button>
                   </div>
                 </div>
               </CardContent>

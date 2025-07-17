@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function Header() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20encontrei%20seu%20contato%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F%20%F0%9F%98%8A"
+  const { openModal } = useLeadCapture();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-rute/20 bg-maria/95 backdrop-blur supports-[backdrop-filter]:bg-maria/60">
@@ -36,25 +37,21 @@ export function Header() {
         </nav>
 
         {/* CTA Button */}
-        <a 
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button 
+          onClick={openModal}
           className={cn(buttonVariants({ variant: "cta", size: "sm" }), "hidden sm:inline-flex")}
         >
           <span className="hidden md:inline">Quero me acolher</span>
           <span className="md:hidden">Acolher</span>
-        </a>
+        </Button>
         
         {/* Mobile CTA */}
-        <a 
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button 
+          onClick={openModal}
           className={cn(buttonVariants({ variant: "cta", size: "sm" }), "sm:hidden")}
         >
           Contato
-        </a>
+        </Button>
       </div>
     </header>
   )

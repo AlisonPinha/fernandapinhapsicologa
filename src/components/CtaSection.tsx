@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { Heart, ArrowRight, Clock, Shield } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function CtaSection() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%20Fernanda%2C%20estou%20pronta%20para%20dar%20o%20primeiro%20passo.%20Gostaria%20de%20agendar%20minha%20consulta%20de%20acolhimento."
+  const { openModal } = useLeadCapture();
 
   return (
     <section className="py-10 md:py-16 lg:py-20 bg-ester relative overflow-hidden">
@@ -82,15 +83,13 @@ export function CtaSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 md:gap-4 justify-center items-center">
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button 
+              onClick={openModal}
               className="inline-flex items-center justify-center px-8 py-4 bg-maria text-ester font-bold text-lg rounded-xl hover:shadow-elegant transform hover:scale-105 transition-all duration-300"
             >
               Começar minha transformação agora
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </Button>
             
             <a 
               href="#depoimentos"

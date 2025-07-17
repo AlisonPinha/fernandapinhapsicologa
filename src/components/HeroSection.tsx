@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { Heart, ArrowRight } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function HeroSection() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20dar%20o%20primeiro%20passo%20para%20cuidar%20da%20minha%20sa%C3%BAde%20mental."
+  const { openModal } = useLeadCapture();
 
   return (
     <section id="inicio" className="relative min-h-[calc(100vh-3.5rem)] md:min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
@@ -62,16 +63,14 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 md:gap-4 items-center lg:items-start">
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button 
+              onClick={openModal}
               className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
             >
               <span className="hidden sm:inline">Quero minha consulta de acolhimento</span>
               <span className="sm:hidden">Consulta de acolhimento</span>
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+            </Button>
             
             <a 
               href="#como-ajudo"

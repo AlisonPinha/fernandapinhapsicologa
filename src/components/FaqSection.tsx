@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { MessageCircle } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function FaqSection() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20que%20n%C3%A3o%20encontrei%20nas%20perguntas%20frequentes."
+  const { openModal } = useLeadCapture();
 
   const faqs = [
     {
@@ -106,15 +107,13 @@ export function FaqSection() {
               Estou aqui para esclarecer qualquer dúvida que você tenha.
             </p>
 
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Button 
+              onClick={openModal}
               className={cn(buttonVariants({ variant: "elegant", size: "lg" }), "w-full sm:w-auto")}
             >
               <span className="hidden sm:inline">Fazer minha pergunta no WhatsApp</span>
               <span className="sm:hidden">Fazer pergunta</span>
-            </a>
+            </Button>
           </div>
         </div>
       </div>

@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { GraduationCap, Heart, Award, ArrowRight } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function AboutSection() {
-  const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%20Fernanda%2C%20li%20sua%20hist%C3%B3ria%20e%20me%20identifiquei.%20Gostaria%20de%20conversar%20sobre%20minha%20situa%C3%A7%C3%A3o."
+  const { openModal } = useLeadCapture();
 
   return (
     <section id="sobre" className="py-10 md:py-16 lg:py-20 bg-maria">
@@ -108,15 +109,13 @@ export function AboutSection() {
 
             {/* CTA */}
             <div className="flex flex-col gap-4 items-center lg:items-start">
-              <a 
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Button 
+                onClick={openModal}
                 className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
               >
                 Quero conhecer a minha nova psicóloga
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Button>
               
               <a 
                 href="#como-ajudo"
