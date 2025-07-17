@@ -73,8 +73,9 @@ export function CtaSection() {
 
           {/* Urgency */}
           <div className="bg-debora/20 backdrop-blur rounded-2xl p-4 md:p-5 mb-5 md:mb-6">
-            <p className="text-maria font-medium text-sm md:text-base text-center">
-              🔥 <strong>Sua transformação não pode esperar</strong> - Comece hoje mesmo sua jornada de cura
+            <p className="text-maria font-medium text-sm md:text-base text-center flex items-center justify-center gap-2">
+              <Heart className="h-4 w-4 text-debora" />
+              <strong>Sua transformação não pode esperar</strong> - Comece hoje mesmo sua jornada de cura
             </p>
           </div>
 
