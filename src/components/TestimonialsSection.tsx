@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function TestimonialsSection() {
+  const { openModal } = useLeadCapture();
+  
   const testimonials = [
     {
       name: "P.S.S.L",
@@ -92,15 +95,13 @@ export function TestimonialsSection() {
                   Que tal dar o primeiro passo para escrever sua transformação?
                 </p>
 
-                <a 
-                  href="https://wa.me/5571981932301?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20minha%20jornada%20de%20transforma%C3%A7%C3%A3o"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
+                  onClick={openModal}
                   className="inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 bg-ester text-maria rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto"
                 >
                   <span className="hidden sm:inline">Começar minha jornada</span>
                   <span className="sm:hidden">Começar jornada</span>
-                </a>
+                </button>
               </div>
             </CardContent>
           </Card>
