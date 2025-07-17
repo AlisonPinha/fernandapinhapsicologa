@@ -1,6 +1,8 @@
 import { Heart, Instagram, Linkedin } from "lucide-react"
+import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function Footer() {
+  const { openModal } = useLeadCapture();
   const whatsappUrl = "https://wa.me/5571981932301"
   const instagramUrl = "https://www.instagram.com/nandapinha"
 
@@ -68,17 +70,15 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="font-semibold text-ester text-base md:text-lg">Contato</h3>
             <div className="space-y-2">
-              <a 
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                onClick={openModal}
                 className="flex items-center gap-2 text-ester/70 hover:text-rute transition-colors text-sm"
               >
                 <div className="w-4 h-4 rounded bg-rute/20 flex items-center justify-center">
                   <span className="text-xs">📱</span>
                 </div>
                 (71) 98193-2301
-              </a>
+              </button>
               
               <a 
                 href={instagramUrl}
