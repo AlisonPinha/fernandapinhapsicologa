@@ -21,7 +21,6 @@ export function LeadCaptureProvider({ children }: { children: ReactNode }) {
     const message = `Olá, Dra. Fernanda! Acabei de preencher o formulário da sua página.
 
 Nome: ${data.name}
-WhatsApp: ${data.phone}
 Motivo: ${data.motivation}
 
 Gostaria de conversar sobre atendimento psicológico.`;

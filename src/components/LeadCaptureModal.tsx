@@ -14,17 +14,13 @@ interface LeadCaptureModalProps {
 
 export interface LeadFormData {
   name: string;
-  phone: string;
   motivation: string;
-  agreement: boolean;
 }
 
 export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModalProps) {
   const [formData, setFormData] = useState<LeadFormData>({
     name: '',
-    phone: '',
-    motivation: '',
-    agreement: false
+    motivation: ''
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -36,18 +32,8 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
       newErrors.name = 'Nome é obrigatório';
     }
 
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'WhatsApp é obrigatório';
-    } else if (!/^\d{10,11}$/.test(formData.phone.replace(/\D/g, ''))) {
-      newErrors.phone = 'Digite um número válido com DDD (ex: 11987654321)';
-    }
-
     if (!formData.motivation.trim()) {
       newErrors.motivation = 'Este campo é obrigatório';
-    }
-
-    if (!formData.agreement) {
-      newErrors.agreement = 'Você deve concordar com o uso dos seus dados';
     }
 
     setErrors(newErrors);
@@ -61,27 +47,12 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
       // Reset form
       setFormData({
         name: '',
-        phone: '',
-        motivation: '',
-        agreement: false
+        motivation: ''
       });
       setErrors({});
     }
   };
 
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/\D/g, '');
-    let formattedValue = value;
-    
-    if (value.length >= 2) {
-      formattedValue = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-    }
-    if (value.length >= 7) {
-      formattedValue = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7, 11)}`;
-    }
-    
-    setFormData(prev => ({ ...prev, phone: formattedValue }));
-  };
 
   if (!isOpen) return null;
 
@@ -120,21 +91,6 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </div>
 
-          <div>
-            <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-              📱 WhatsApp (com DDD):
-            </Label>
-            <Input
-              id="phone"
-              type="tel"
-              value={formData.phone}
-              onChange={handlePhoneChange}
-              placeholder="(11) 99999-9999"
-              maxLength={15}
-              className={errors.phone ? 'border-red-500' : ''}
-            />
-            {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
-          </div>
 
           <div>
             <Label htmlFor="motivation" className="text-sm font-medium text-gray-700">
@@ -146,25 +102,11 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
               onChange={(e) => setFormData(prev => ({ ...prev, motivation: e.target.value }))}
               placeholder="Conte um pouco sobre o que te trouxe até aqui..."
               className={errors.motivation ? 'border-red-500' : ''}
-              rows={3}
+              rows={4}
             />
             {errors.motivation && <p className="text-red-500 text-sm mt-1">{errors.motivation}</p>}
           </div>
 
-          <div className="flex items-start space-x-2">
-            <Checkbox
-              id="agreement"
-              checked={formData.agreement}
-              onCheckedChange={(checked) => 
-                setFormData(prev => ({ ...prev, agreement: checked as boolean }))
-              }
-              className={errors.agreement ? 'border-red-500' : ''}
-            />
-            <Label htmlFor="agreement" className="text-sm text-gray-700 leading-relaxed">
-              Declaro estar de acordo com o uso dos meus dados para contato.
-            </Label>
-          </div>
-          {errors.agreement && <p className="text-red-500 text-sm mt-1">{errors.agreement}</p>}
 
           <Button
             type="submit"
