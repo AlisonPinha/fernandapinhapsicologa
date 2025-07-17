@@ -31,10 +31,10 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section id="depoimentos" className="py-12 md:py-20 lg:py-24 bg-gradient-soft">
+    <section id="depoimentos" className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Vidas que já se <span className="text-rute">transformaram</span>
           </h2>
@@ -45,11 +45,11 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mb-6 md:mb-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 bg-maria/80 backdrop-blur">
-              <CardContent className="p-6">
-                <div className="space-y-4">
+              <CardContent className="p-5">
+                <div className="space-y-3">
                   {/* Stars */}
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
@@ -77,8 +77,8 @@ export function TestimonialsSection() {
 
           {/* Special CTA Card */}
           <Card className="border-debora/40 bg-gradient-warm hover:shadow-elegant transition-all duration-300 md:col-span-2 lg:col-span-1">
-            <CardContent className="p-6 text-center">
-              <div className="space-y-4">
+            <CardContent className="p-5 text-center">
+              <div className="space-y-3">
                 <div className="w-16 h-16 rounded-full bg-ester/10 flex items-center justify-center mx-auto">
                   <Quote className="h-8 w-8 text-ester" />
                 </div>
@@ -106,7 +106,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Stats */}
-        <div className="grid sm:grid-cols-3 gap-6 md:gap-8 bg-maria/60 backdrop-blur rounded-2xl p-6 md:p-8">
+        <div className="grid sm:grid-cols-3 gap-5 md:gap-6 bg-maria/60 backdrop-blur rounded-2xl p-5 md:p-6">
           <div className="text-center">
             <div className="text-3xl font-bold text-ester mb-2">200+</div>
             <div className="text-ester/70">Vidas transformadas</div>

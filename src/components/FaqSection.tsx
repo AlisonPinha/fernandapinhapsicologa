@@ -56,10 +56,10 @@ export function FaqSection() {
   ]
 
   return (
-    <section className="py-12 md:py-20 lg:py-24 bg-gradient-soft">
+    <section className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
       <div className="container max-w-4xl">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Perguntas que chegam ao 
             <span className="text-rute"> coração</span>
@@ -71,13 +71,13 @@ export function FaqSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="mb-8 md:mb-12">
-          <Accordion type="single" collapsible className="space-y-4">
+        <div className="mb-6 md:mb-8">
+          <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-rute/20 rounded-2xl px-6 bg-maria/60 backdrop-blur"
+                className="border border-rute/20 rounded-2xl px-5 bg-maria/60 backdrop-blur"
               >
                 <AccordionTrigger className="text-left text-ester hover:text-rute [&[data-state=open]]:text-rute font-medium">
                   {faq.question}
@@ -91,8 +91,8 @@ export function FaqSection() {
         </div>
 
         {/* CTA Card */}
-        <div className="bg-gradient-warm rounded-3xl p-6 md:p-8 text-center">
-          <div className="space-y-4 md:space-y-6">
+        <div className="bg-gradient-warm rounded-3xl p-5 md:p-6 text-center">
+          <div className="space-y-4 md:space-y-5">
             <div className="w-16 h-16 rounded-full bg-ester/10 flex items-center justify-center mx-auto">
               <MessageCircle className="h-8 w-8 text-ester" />
             </div>

@@ -15,9 +15,9 @@ export function HeroSection() {
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-debora"></div>
       </div>
 
-      <div className="container grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12 md:py-20 lg:py-24">
+      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-8 md:py-16 lg:py-20">
         {/* Content */}
-        <div className="space-y-6 md:space-y-8">
+        <div className="space-y-5 md:space-y-6">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-debora/20 text-ester">
             <Heart className="h-4 w-4 text-debora" />
@@ -25,7 +25,7 @@ export function HeroSection() {
           </div>
 
           {/* Main Headline */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-ester leading-tight">
               Entre a dor e a 
               <span className="text-rute"> liberdade</span>, 

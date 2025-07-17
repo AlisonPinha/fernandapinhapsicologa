@@ -35,10 +35,10 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="como-ajudo" className="py-12 md:py-20 lg:py-24 bg-maria">
+    <section id="como-ajudo" className="py-10 md:py-16 lg:py-20 bg-maria">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Como posso <span className="text-rute">transformar</span> sua vida
           </h2>
@@ -49,16 +49,16 @@ export function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6 mb-10 md:mb-12">
           {services.map((service, index) => (
             <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur">
-              <CardContent className="p-8">
+              <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-warm flex items-center justify-center">
                     <service.icon className="h-6 w-6 text-ester" />
                   </div>
                   
-                  <div className="space-y-4 flex-1">
+                  <div className="space-y-3 flex-1">
                     <h3 className="text-xl font-semibold text-ester">{service.title}</h3>
                     <p className="text-ester/70 leading-relaxed">{service.description}</p>
                     
@@ -79,8 +79,8 @@ export function ServicesSection() {
         </div>
 
         {/* Process Section */}
-        <div className="bg-gradient-soft rounded-3xl p-6 md:p-8 lg:p-12">
-          <div className="text-center mb-12">
+        <div className="bg-gradient-soft rounded-3xl p-5 md:p-6 lg:p-8">
+          <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-ester mb-4">
               Como funciona nossa jornada juntas
             </h3>
@@ -89,7 +89,7 @@ export function ServicesSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-ester">1</span>
