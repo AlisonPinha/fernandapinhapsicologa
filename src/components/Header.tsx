@@ -14,7 +14,7 @@ export function Header() {
           <img 
             src="/lovable-uploads/5332b9be-61bb-4346-accd-17b7d43dcd47.png" 
             alt="Fernanda Pinha Psicóloga" 
-            className="h-24 md:h-30 w-auto"
+            className="h-48 md:h-60 w-auto"
           />
         </div>
 
