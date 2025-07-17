@@ -101,14 +101,12 @@ export function HeroSection() {
         {/* Image */}
         <div className="relative order-first lg:order-last">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
-            <div className="aspect-[4/5] md:aspect-[3/4] bg-gradient-warm flex items-center justify-center">
-                <div className="text-center text-ester">
-                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-maria/30 mx-auto mb-4 flex items-center justify-center">
-                    <Heart className="h-12 w-12 md:h-16 md:w-16 text-ester/60" />
-                  </div>
-                  <p className="text-base md:text-lg font-medium">Foto profissional da Fernanda</p>
-                  <p className="text-xs md:text-sm opacity-70">Psicóloga CRP 03/32557</p>
-              </div>
+            <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
+              <img 
+                src="/lovable-uploads/5e891758-c023-42c3-ab83-6e7a5884c33f.png" 
+                alt="Fernanda - Psicóloga CRP 03/32557"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
