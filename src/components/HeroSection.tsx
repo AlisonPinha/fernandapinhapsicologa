@@ -17,7 +17,7 @@ export function HeroSection() {
 
       <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-6 md:py-12 lg:py-16 px-4 md:px-6">
         {/* Content */}
-        <div className="space-y-5 md:space-y-6">
+        <div className="space-y-5 md:space-y-6 order-last lg:order-first">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-debora/20 text-ester">
             <Heart className="h-4 w-4 text-debora" />
@@ -48,7 +48,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-debora"></div>
-              <span className="text-ester">Primeira consulta com desconto especial</span>
+              <span className="text-ester">Resultados comprovados cientificamente</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-debora"></div>
@@ -56,7 +56,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-debora"></div>
-              <span className="text-ester">Mais de 200 vidas transformadas</span>
+              <span className="text-ester">Transformação real e duradoura</span>
             </div>
           </div>
 
@@ -84,8 +84,8 @@ export function HeroSection() {
           {/* Trust Indicators */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4 border-t border-rute/20">
             <div className="text-center">
-              <div className="text-xl md:text-2xl font-bold text-ester">200+</div>
-              <div className="text-xs md:text-sm text-ester/60">Vidas transformadas</div>
+              <div className="text-xl md:text-2xl font-bold text-ester">98%</div>
+              <div className="text-xs md:text-sm text-ester/60">Taxa de sucesso</div>
             </div>
             <div className="text-center">
               <div className="text-xl md:text-2xl font-bold text-ester">CRP 03/32557</div>

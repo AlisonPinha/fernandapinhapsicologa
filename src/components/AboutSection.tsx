@@ -35,8 +35,8 @@ export function AboutSection() {
             
             <Card className="absolute -bottom-4 -left-4 w-32 bg-maria/90 backdrop-blur border-rute/20">
               <CardContent className="p-4 text-center">
-                <div className="text-lg font-bold text-ester">200+</div>
-                <div className="text-xs text-ester/70">Pacientes</div>
+                <div className="text-lg font-bold text-ester">98%</div>
+                <div className="text-xs text-ester/70">Satisfação</div>
               </CardContent>
             </Card>
           </div>
@@ -99,11 +99,11 @@ export function AboutSection() {
             {/* Philosophy */}
             <Card className="border-debora/20 bg-gradient-warm">
               <CardContent className="p-6">
-                <h3 className="text-lg font-semibold text-ester mb-3">Minha filosofia</h3>
+                <h3 className="text-lg font-semibold text-ester mb-3">Minha missão</h3>
                 <p className="text-ester/80 italic">
-                  "Com formação sólida em Terapia Cognitivo-Comportamental e um coração 
-                  firmado na esperança que vem de Deus, abri espaço para mulheres feridas 
-                  se reconhecerem além da dor."
+                  "Acredito que toda mulher carrega dentro de si a força necessária para se 
+                  transformar. Meu papel é ajudá-la a encontrar esse caminho, oferecendo 
+                  ferramentas científicas e acolhimento genuíno para que ela floresça."
                 </p>
               </CardContent>
             </Card>

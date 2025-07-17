@@ -58,8 +58,8 @@ export function CtaSection() {
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-6 w-6 text-debora" />
               </div>
-              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Primeira Consulta</h3>
-              <p className="text-xs md:text-sm text-maria/70">R$ 150 (valor especial)</p>
+              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Disponibilidade</h3>
+              <p className="text-xs md:text-sm text-maria/70">Horários flexíveis</p>
             </div>
 
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-5 text-center">
@@ -74,7 +74,7 @@ export function CtaSection() {
           {/* Urgency */}
           <div className="bg-debora/20 backdrop-blur rounded-2xl p-4 md:p-5 mb-5 md:mb-6">
             <p className="text-maria font-medium text-sm md:text-base text-center">
-              🕐 <strong>Apenas 3 vagas disponíveis esta semana</strong> para primeiras consultas com desconto especial
+              🔥 <strong>Sua transformação não pode esperar</strong> - Comece hoje mesmo sua jornada de cura
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export function CtaSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-maria text-ester font-bold text-lg rounded-xl hover:shadow-elegant transform hover:scale-105 transition-all duration-300"
             >
-              Garantir minha vaga com desconto
+              Começar minha transformação agora
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             

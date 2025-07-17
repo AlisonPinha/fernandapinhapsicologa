@@ -26,8 +26,8 @@ export function FaqSection() {
       answer: "Atendo por videoconferência em ambiente seguro e sigiloso. Você precisa apenas de um local privado e conexão estável. A terapia online é regulamentada pelo CFP e tem a mesma eficácia do atendimento presencial, com a vantagem da comodidade e acessibilidade."
     },
     {
-      question: "Qual é o valor da consulta?",
-      answer: "Para primeiras consultas, ofereço um valor especial de R$150 (valor normal R$200). Sessões regulares são investimento em você mesma. Emito notas fiscais para possível reembolso pelo plano de saúde. Entre em contato para conhecer as condições completas."
+      question: "Como sei se você é a terapeuta certa para mim?",
+      answer: "Na primeira consulta, você sentirá se existe conexão e confiança entre nós. Meu compromisso é criar um espaço seguro onde você se sinta acolhida e compreendida. Se não houver identificação, te ajudo a encontrar o melhor caminho para sua jornada."
     },
     {
       question: "Você atende casos de ansiedade severa?",
