@@ -78,8 +78,9 @@ export function LeadCaptureModal({ isOpen, onClose, onSubmit }: LeadCaptureModal
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="name" className="text-sm font-medium text-gray-700">
-              👤 Seu nome:
+            <Label htmlFor="name" className="text-sm font-medium text-gray-700 flex items-center gap-2">
+              <Heart className="h-4 w-4 text-debora" />
+              Seu nome:
             </Label>
             <Input
               id="name"
