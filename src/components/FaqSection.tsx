@@ -57,14 +57,14 @@ export function FaqSection() {
 
   return (
     <section className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
-      <div className="container max-w-4xl">
+      <div className="container max-w-4xl px-4 md:px-6">
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-ester mb-4 md:mb-6 text-center">
             Perguntas que chegam ao 
             <span className="text-rute"> coração</span>
           </h2>
-          <p className="text-lg text-ester/70 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-ester/70 leading-relaxed max-w-2xl mx-auto text-center">
             Sei que dar o primeiro passo pode gerar muitas dúvidas. 
             Aqui estão as respostas para as perguntas mais frequentes que recebo.
           </p>
@@ -79,10 +79,10 @@ export function FaqSection() {
                 value={`item-${index}`}
                 className="border border-rute/20 rounded-2xl px-5 bg-maria/60 backdrop-blur"
               >
-                <AccordionTrigger className="text-left text-ester hover:text-rute [&[data-state=open]]:text-rute font-medium">
+                <AccordionTrigger className="text-left text-ester hover:text-rute [&[data-state=open]]:text-rute font-medium text-sm md:text-base">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-ester/80 leading-relaxed pt-2">
+                <AccordionContent className="text-ester/80 leading-relaxed pt-2 text-sm md:text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -97,11 +97,11 @@ export function FaqSection() {
               <MessageCircle className="h-8 w-8 text-ester" />
             </div>
             
-            <h3 className="text-2xl font-serif font-bold text-ester">
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-ester">
               Ainda tem dúvidas?
             </h3>
             
-            <p className="text-ester/70 max-w-md mx-auto">
+            <p className="text-ester/70 max-w-md mx-auto text-sm md:text-base">
               Cada pessoa é única, e talvez sua pergunta seja diferente. 
               Estou aqui para esclarecer qualquer dúvida que você tenha.
             </p>
@@ -110,9 +110,10 @@ export function FaqSection() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "elegant", size: "lg" }))}
+              className={cn(buttonVariants({ variant: "elegant", size: "lg" }), "w-full sm:w-auto")}
             >
-              Fazer minha pergunta no WhatsApp
+              <span className="hidden sm:inline">Fazer minha pergunta no WhatsApp</span>
+              <span className="sm:hidden">Fazer pergunta</span>
             </a>
           </div>
         </div>

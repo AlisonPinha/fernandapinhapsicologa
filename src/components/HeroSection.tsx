@@ -7,7 +7,7 @@ export function HeroSection() {
   const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20dar%20o%20primeiro%20passo%20para%20cuidar%20da%20minha%20sa%C3%BAde%20mental."
 
   return (
-    <section id="inicio" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
+    <section id="inicio" className="relative min-h-[calc(100vh-3.5rem)] md:min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-ester"></div>
@@ -15,7 +15,7 @@ export function HeroSection() {
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-debora"></div>
       </div>
 
-      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-8 md:py-16 lg:py-20">
+      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-6 md:py-12 lg:py-16 px-4 md:px-6">
         {/* Content */}
         <div className="space-y-5 md:space-y-6">
           {/* Tag */}
@@ -26,14 +26,14 @@ export function HeroSection() {
 
           {/* Main Headline */}
           <div className="space-y-3">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-ester leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-ester leading-tight text-center lg:text-left">
               Entre a dor e a 
               <span className="text-rute"> liberdade</span>, 
               existe um lugar:
               <span className="text-debora"> aqui.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-ester/80 leading-relaxed max-w-2xl">
+            <p className="text-base md:text-lg lg:text-xl text-ester/80 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
               Sou Fernanda, psicóloga especializada em TCC. Ajudo mulheres a transformarem 
               ansiedade em tranquilidade, relacionamentos tóxicos em vínculos saudáveis, 
               e feridas em força para recomeçar.
@@ -41,7 +41,7 @@ export function HeroSection() {
           </div>
 
           {/* Benefits */}
-          <div className="grid sm:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 text-sm">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-debora"></div>
               <span className="text-ester">Atendimento online personalizado</span>
@@ -61,52 +61,53 @@ export function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-3 md:gap-4 items-center lg:items-start">
             <a 
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "cta", size: "xl" }))}
+              className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
             >
-              Quero minha consulta de acolhimento
+              <span className="hidden sm:inline">Quero minha consulta de acolhimento</span>
+              <span className="sm:hidden">Consulta de acolhimento</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             
             <a 
               href="#como-ajudo"
-              className={cn(buttonVariants({ variant: "soft", size: "xl" }))}
+              className={cn(buttonVariants({ variant: "soft", size: "lg" }), "w-full sm:w-auto")}
             >
               Como posso te ajudar
             </a>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex items-center gap-6 pt-4 border-t border-rute/20">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4 border-t border-rute/20">
             <div className="text-center">
-              <div className="text-2xl font-bold text-ester">200+</div>
-              <div className="text-sm text-ester/60">Vidas transformadas</div>
+              <div className="text-xl md:text-2xl font-bold text-ester">200+</div>
+              <div className="text-xs md:text-sm text-ester/60">Vidas transformadas</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-ester">CRP 03/32557</div>
-              <div className="text-sm text-ester/60">Registro profissional</div>
+              <div className="text-xl md:text-2xl font-bold text-ester">CRP 03/32557</div>
+              <div className="text-xs md:text-sm text-ester/60">Registro profissional</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-ester">TCC</div>
-              <div className="text-sm text-ester/60">Especialista certificada</div>
+              <div className="text-xl md:text-2xl font-bold text-ester">TCC</div>
+              <div className="text-xs md:text-sm text-ester/60">Especialista certificada</div>
             </div>
           </div>
         </div>
 
         {/* Image */}
-        <div className="relative">
+        <div className="relative order-first lg:order-last">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
-            <div className="aspect-[4/5] bg-gradient-warm flex items-center justify-center">
-              <div className="text-center text-ester">
-                <div className="w-32 h-32 rounded-full bg-maria/30 mx-auto mb-4 flex items-center justify-center">
-                  <Heart className="h-16 w-16 text-ester/60" />
-                </div>
-                <p className="text-lg font-medium">Foto profissional da Fernanda</p>
-                <p className="text-sm opacity-70">Psicóloga CRP 03/32557</p>
+            <div className="aspect-[4/5] md:aspect-[3/4] bg-gradient-warm flex items-center justify-center">
+                <div className="text-center text-ester">
+                  <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-maria/30 mx-auto mb-4 flex items-center justify-center">
+                    <Heart className="h-12 w-12 md:h-16 md:w-16 text-ester/60" />
+                  </div>
+                  <p className="text-base md:text-lg font-medium">Foto profissional da Fernanda</p>
+                  <p className="text-xs md:text-sm opacity-70">Psicóloga CRP 03/32557</p>
               </div>
             </div>
           </div>

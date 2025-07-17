@@ -15,7 +15,7 @@ export function CtaSection() {
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-rute"></div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Content */}
           <div className="space-y-5 md:space-y-6 mb-6 md:mb-8">
@@ -24,62 +24,62 @@ export function CtaSection() {
               <span className="text-sm font-medium">Sua transformação começa agora</span>
             </div>
 
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-maria leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl font-serif font-bold text-maria leading-tight text-center">
               Entre a dor e a liberdade,
               <br />
               <span className="text-debora">escolha se acolher.</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-maria/80 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-maria/80 leading-relaxed max-w-3xl mx-auto text-center">
               Você não precisa carregar suas feridas sozinha. Não precisa fingir que está tudo bem 
               quando não está. Sua dor é válida, e sua cura também é possível.
             </p>
           </div>
 
           {/* Benefits */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-6 md:mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-6 md:mb-8">
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-5 text-center">
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-6 w-6 text-debora" />
               </div>
-              <h3 className="font-semibold text-maria mb-2">Acolhimento Real</h3>
-              <p className="text-sm text-maria/70">Espaço seguro para suas verdades</p>
+              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Acolhimento Real</h3>
+              <p className="text-xs md:text-sm text-maria/70">Espaço seguro para suas verdades</p>
             </div>
 
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-5 text-center">
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-6 w-6 text-debora" />
               </div>
-              <h3 className="font-semibold text-maria mb-2">Método Científico</h3>
-              <p className="text-sm text-maria/70">TCC com resultados comprovados</p>
+              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Método Científico</h3>
+              <p className="text-xs md:text-sm text-maria/70">TCC com resultados comprovados</p>
             </div>
 
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-5 text-center">
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-6 w-6 text-debora" />
               </div>
-              <h3 className="font-semibold text-maria mb-2">Primeira Consulta</h3>
-              <p className="text-sm text-maria/70">R$ 150 (valor especial)</p>
+              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Primeira Consulta</h3>
+              <p className="text-xs md:text-sm text-maria/70">R$ 150 (valor especial)</p>
             </div>
 
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-5 text-center">
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="h-6 w-6 text-debora" />
               </div>
-              <h3 className="font-semibold text-maria mb-2">Online</h3>
-              <p className="text-sm text-maria/70">No conforto da sua casa</p>
+              <h3 className="font-semibold text-maria mb-2 text-sm md:text-base">Online</h3>
+              <p className="text-xs md:text-sm text-maria/70">No conforto da sua casa</p>
             </div>
           </div>
 
           {/* Urgency */}
           <div className="bg-debora/20 backdrop-blur rounded-2xl p-4 md:p-5 mb-5 md:mb-6">
-            <p className="text-maria font-medium">
+            <p className="text-maria font-medium text-sm md:text-base text-center">
               🕐 <strong>Apenas 3 vagas disponíveis esta semana</strong> para primeiras consultas com desconto especial
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-3 md:gap-4 justify-center items-center">
             <a 
               href={whatsappUrl}
               target="_blank"
@@ -92,14 +92,15 @@ export function CtaSection() {
             
             <a 
               href="#depoimentos"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-maria text-maria font-semibold text-lg rounded-xl hover:bg-maria hover:text-ester transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-maria text-maria font-semibold text-base md:text-lg rounded-xl hover:bg-maria hover:text-ester transition-all duration-300 w-full sm:w-auto"
             >
-              Ver mais depoimentos
+              <span className="hidden sm:inline">Ver mais depoimentos</span>
+              <span className="sm:hidden">Ver depoimentos</span>
             </a>
           </div>
 
           {/* Trust */}
-          <p className="text-maria/60 text-sm mt-6">
+          <p className="text-maria/60 text-xs md:text-sm mt-4 md:mt-6 text-center">
             ✨ Mais de 200 mulheres já escolheram se acolher • CRP 03/32557 • Atendimento sigiloso e seguro
           </p>
         </div>

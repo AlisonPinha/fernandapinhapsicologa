@@ -9,10 +9,10 @@ export function AboutSection() {
 
   return (
     <section id="sobre" className="py-10 md:py-16 lg:py-20 bg-maria">
-      <div className="container">
+      <div className="container px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Image Side */}
-          <div className="relative">
+          <div className="relative order-first lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
               <div className="aspect-[4/5] bg-gradient-primary flex items-center justify-center">
                 <div className="text-center text-maria">
@@ -44,13 +44,13 @@ export function AboutSection() {
           {/* Content Side */}
           <div className="space-y-5 md:space-y-6">
             <div className="space-y-5">
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-ester leading-tight text-center lg:text-left">
                 Então, quem é 
                 <span className="text-rute"> Fernanda</span> 
                 <span className="text-debora"> Psicóloga?</span>
               </h2>
 
-              <div className="space-y-4 text-ester/80 leading-relaxed">
+              <div className="space-y-4 text-sm md:text-base text-ester/80 leading-relaxed text-center lg:text-left">
                 <p>
                   <strong className="text-ester">História curta:</strong> Algumas pessoas escolhem a psicologia. 
                   Outras são escolhidas pela missão de acolher o que o mundo insiste em quebrar.
@@ -74,7 +74,7 @@ export function AboutSection() {
             </div>
 
             {/* Credentials */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Card className="border-rute/20 bg-gradient-soft">
                 <CardContent className="p-4 flex items-center gap-3">
                   <GraduationCap className="h-8 w-8 text-rute flex-shrink-0" />
@@ -109,12 +109,12 @@ export function AboutSection() {
             </Card>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-4 items-center lg:items-start">
               <a 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={cn(buttonVariants({ variant: "cta", size: "lg" }))}
+                className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
               >
                 Quero conhecer Fernanda
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -122,9 +122,10 @@ export function AboutSection() {
               
               <a 
                 href="#como-ajudo"
-                className={cn(buttonVariants({ variant: "elegant", size: "lg" }))}
+                className={cn(buttonVariants({ variant: "elegant", size: "lg" }), "w-full sm:w-auto")}
               >
-                Ver como ela pode me ajudar
+                <span className="hidden sm:inline">Ver como ela pode me ajudar</span>
+                <span className="sm:hidden">Como ela pode ajudar</span>
               </a>
             </div>
           </div>

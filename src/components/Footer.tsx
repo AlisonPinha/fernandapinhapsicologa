@@ -6,29 +6,29 @@ export function Footer() {
 
   return (
     <footer id="contato" className="bg-maria border-t border-rute/20">
-      <div className="container py-10 md:py-12 lg:py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-6 md:mb-8">
+      <div className="container py-10 md:py-12 lg:py-16 px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-6 md:mb-8">
           {/* Brand */}
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-full bg-gradient-primary"></div>
-              <span className="font-serif text-xl font-bold text-ester">
+              <span className="font-serif text-lg md:text-xl font-bold text-ester">
                 Fernanda Pinha
               </span>
             </div>
-            <p className="text-ester/70 text-sm leading-relaxed">
+            <p className="text-ester/70 text-xs md:text-sm leading-relaxed">
               Psicóloga especializada em TCC, ajudando mulheres a transformarem 
               dor em força e medo em coragem para viver plenamente.
             </p>
-            <div className="text-ester font-medium">
+            <div className="text-ester font-medium text-sm md:text-base">
               CRP 03/32557
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-3">
-            <h3 className="font-semibold text-ester">Navegação</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="font-semibold text-ester text-base md:text-lg">Navegação</h3>
+            <ul className="space-y-2 text-xs md:text-sm">
               <li>
                 <a href="#inicio" className="text-ester/70 hover:text-rute transition-colors">
                   Início
@@ -54,8 +54,8 @@ export function Footer() {
 
           {/* Services */}
           <div className="space-y-3">
-            <h3 className="font-semibold text-ester">Especialidades</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="font-semibold text-ester text-base md:text-lg">Especialidades</h3>
+            <ul className="space-y-2 text-xs md:text-sm">
               <li className="text-ester/70">Ansiedade e Pânico</li>
               <li className="text-ester/70">Relacionamentos Tóxicos</li>
               <li className="text-ester/70">Autoestima e Autoconfiança</li>
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-3">
-            <h3 className="font-semibold text-ester">Contato</h3>
+            <h3 className="font-semibold text-ester text-base md:text-lg">Contato</h3>
             <div className="space-y-2">
               <a 
                 href={whatsappUrl}
@@ -90,7 +90,7 @@ export function Footer() {
                 @nandapinha
               </a>
 
-              <div className="text-ester/70 text-sm">
+              <div className="text-ester/70 text-xs md:text-sm">
                 📍 Atendimento Online
                 <br />
                 <span className="text-xs">Todo Brasil</span>
@@ -101,7 +101,7 @@ export function Footer() {
 
         {/* Mission Statement */}
         <div className="bg-gradient-soft rounded-2xl p-4 md:p-5 mb-5 md:mb-6 text-center">
-          <p className="text-ester italic font-medium">
+          <p className="text-ester italic font-medium text-sm md:text-base text-center">
             "Entre a dor e a liberdade, existe um lugar: aqui. 
             Um espaço onde você pode se acolher, se reconhecer e se transformar."
           </p>
@@ -109,16 +109,16 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-rute/20 pt-5 md:pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-ester/60 text-sm">
+          <div className="text-ester/60 text-xs md:text-sm text-center md:text-left">
             © 2025 Fernanda Pinha - Psicóloga CRP 03/32557. Todos os direitos reservados.
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             <a 
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ester/60 hover:text-rute transition-colors text-sm"
+              className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm"
             >
               Política de Privacidade
             </a>
@@ -126,7 +126,7 @@ export function Footer() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-ester/60 hover:text-rute transition-colors text-sm"
+              className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm"
             >
               Termos de Uso
             </a>
