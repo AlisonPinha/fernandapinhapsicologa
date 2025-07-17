@@ -7,7 +7,7 @@ export function CtaSection() {
   const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%20Fernanda%2C%20estou%20pronta%20para%20dar%20o%20primeiro%20passo.%20Gostaria%20de%20agendar%20minha%20consulta%20de%20acolhimento."
 
   return (
-    <section className="py-20 bg-ester relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-24 bg-ester relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-maria"></div>
@@ -18,7 +18,7 @@ export function CtaSection() {
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Content */}
-          <div className="space-y-8 mb-12">
+          <div className="space-y-6 md:space-y-8 mb-8 md:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-maria/20 text-maria">
               <Heart className="h-4 w-4 text-debora" />
               <span className="text-sm font-medium">Sua transformação começa agora</span>
@@ -37,7 +37,7 @@ export function CtaSection() {
           </div>
 
           {/* Benefits */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             <div className="bg-maria/10 backdrop-blur rounded-2xl p-6 text-center">
               <div className="w-12 h-12 rounded-full bg-debora/20 flex items-center justify-center mx-auto mb-4">
                 <Heart className="h-6 w-6 text-debora" />
@@ -72,7 +72,7 @@ export function CtaSection() {
           </div>
 
           {/* Urgency */}
-          <div className="bg-debora/20 backdrop-blur rounded-2xl p-6 mb-8">
+          <div className="bg-debora/20 backdrop-blur rounded-2xl p-4 md:p-6 mb-6 md:mb-8">
             <p className="text-maria font-medium">
               🕐 <strong>Apenas 3 vagas disponíveis esta semana</strong> para primeiras consultas com desconto especial
             </p>

@@ -56,10 +56,10 @@ export function FaqSection() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-soft">
+    <section className="py-12 md:py-20 lg:py-24 bg-gradient-soft">
       <div className="container max-w-4xl">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Perguntas que chegam ao 
             <span className="text-rute"> coração</span>
@@ -71,7 +71,7 @@ export function FaqSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
@@ -91,8 +91,8 @@ export function FaqSection() {
         </div>
 
         {/* CTA Card */}
-        <div className="bg-gradient-warm rounded-3xl p-8 text-center">
-          <div className="space-y-6">
+        <div className="bg-gradient-warm rounded-3xl p-6 md:p-8 text-center">
+          <div className="space-y-4 md:space-y-6">
             <div className="w-16 h-16 rounded-full bg-ester/10 flex items-center justify-center mx-auto">
               <MessageCircle className="h-8 w-8 text-ester" />
             </div>

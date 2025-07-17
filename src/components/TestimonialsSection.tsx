@@ -31,10 +31,10 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section id="depoimentos" className="py-20 bg-gradient-soft">
+    <section id="depoimentos" className="py-12 md:py-20 lg:py-24 bg-gradient-soft">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Vidas que já se <span className="text-rute">transformaram</span>
           </h2>
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 bg-maria/80 backdrop-blur">
               <CardContent className="p-6">
@@ -106,7 +106,7 @@ export function TestimonialsSection() {
         </div>
 
         {/* Stats */}
-        <div className="grid sm:grid-cols-3 gap-8 bg-maria/60 backdrop-blur rounded-2xl p-8">
+        <div className="grid sm:grid-cols-3 gap-6 md:gap-8 bg-maria/60 backdrop-blur rounded-2xl p-6 md:p-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-ester mb-2">200+</div>
             <div className="text-ester/70">Vidas transformadas</div>

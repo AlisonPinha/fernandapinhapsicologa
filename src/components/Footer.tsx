@@ -6,8 +6,8 @@ export function Footer() {
 
   return (
     <footer id="contato" className="bg-maria border-t border-rute/20">
-      <div className="container py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div className="container py-12 md:py-16 lg:py-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -100,7 +100,7 @@ export function Footer() {
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-gradient-soft rounded-2xl p-6 mb-8 text-center">
+        <div className="bg-gradient-soft rounded-2xl p-4 md:p-6 mb-6 md:mb-8 text-center">
           <p className="text-ester italic font-medium">
             "Entre a dor e a liberdade, existe um lugar: aqui. 
             Um espaço onde você pode se acolher, se reconhecer e se transformar."
@@ -108,7 +108,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-rute/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-rute/20 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-ester/60 text-sm">
             © 2025 Fernanda Pinha - Psicóloga CRP 03/32557. Todos os direitos reservados.
           </div>
@@ -134,7 +134,7 @@ export function Footer() {
         </div>
 
         {/* Heart */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6 md:mt-8">
           <Heart className="h-6 w-6 text-debora mx-auto" />
         </div>
       </div>

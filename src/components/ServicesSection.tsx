@@ -35,10 +35,10 @@ export function ServicesSection() {
   ]
 
   return (
-    <section id="como-ajudo" className="py-20 bg-maria">
+    <section id="como-ajudo" className="py-12 md:py-20 lg:py-24 bg-maria">
       <div className="container">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester mb-6">
             Como posso <span className="text-rute">transformar</span> sua vida
           </h2>
@@ -49,7 +49,7 @@ export function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {services.map((service, index) => (
             <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur">
               <CardContent className="p-8">
@@ -79,7 +79,7 @@ export function ServicesSection() {
         </div>
 
         {/* Process Section */}
-        <div className="bg-gradient-soft rounded-3xl p-8 md:p-12">
+        <div className="bg-gradient-soft rounded-3xl p-6 md:p-8 lg:p-12">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-ester mb-4">
               Como funciona nossa jornada juntas

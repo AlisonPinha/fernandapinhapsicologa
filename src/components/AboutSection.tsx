@@ -8,9 +8,9 @@ export function AboutSection() {
   const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%20Fernanda%2C%20li%20sua%20hist%C3%B3ria%20e%20me%20identifiquei.%20Gostaria%20de%20conversar%20sobre%20minha%20situa%C3%A7%C3%A3o."
 
   return (
-    <section id="sobre" className="py-20 bg-maria">
+    <section id="sobre" className="py-12 md:py-20 lg:py-24 bg-maria">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image Side */}
           <div className="relative">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
@@ -42,7 +42,7 @@ export function AboutSection() {
           </div>
 
           {/* Content Side */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-ester leading-tight">
                 Então, quem é 

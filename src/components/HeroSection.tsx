@@ -15,9 +15,9 @@ export function HeroSection() {
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-debora"></div>
       </div>
 
-      <div className="container grid lg:grid-cols-2 gap-12 items-center py-20">
+      <div className="container grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12 md:py-20 lg:py-24">
         {/* Content */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-debora/20 text-ester">
             <Heart className="h-4 w-4 text-debora" />
