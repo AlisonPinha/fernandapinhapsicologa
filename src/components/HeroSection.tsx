@@ -7,7 +7,7 @@ export function HeroSection() {
   const whatsappUrl = "https://wa.me/5571981932301?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20dar%20o%20primeiro%20passo%20para%20cuidar%20da%20minha%20sa%C3%BAde%20mental."
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-soft overflow-hidden">
+    <section id="inicio" className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-ester"></div>
