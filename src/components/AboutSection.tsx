@@ -114,7 +114,7 @@ export function AboutSection() {
                 rel="noopener noreferrer"
                 className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
               >
-                Quero conhecer Fernanda
+                Quero conhecer a minha nova psicóloga
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               
