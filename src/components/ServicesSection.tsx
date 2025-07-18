@@ -26,7 +26,7 @@ export function ServicesSection() {
   }, {
     icon: Shield,
     title: "Depressão e Tristeza Profunda",
-    description: "Da escuridão à luz, uma jornada de reconstrução. Encontre esperança, propósito e alegria genuine novamente.",
+    description: "Da escuridão à luz, uma jornada de reconstrução. Encontre esperança, propósito e alegria genuína novamente.",
     whatsappText: "%20depress%C3%A3o%20e%20tristeza"
   }];
   return <section id="como-ajudo" className="py-10 md:py-16 lg:py-20 bg-maria">
