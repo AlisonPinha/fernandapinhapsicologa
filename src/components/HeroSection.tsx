@@ -80,7 +80,11 @@ export function HeroSection() {
             
             <a 
               href="#como-ajudo"
-              className={cn(buttonVariants({ variant: "soft", size: "lg" }), "w-full sm:w-auto")}
+              className={cn(buttonVariants({ variant: "soft", size: "lg" }), "w-full sm:w-auto cursor-pointer")}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('como-ajudo')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               Como posso te ajudar
             </a>
