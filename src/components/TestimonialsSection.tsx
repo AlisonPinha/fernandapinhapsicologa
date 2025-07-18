@@ -21,16 +21,6 @@ export function TestimonialsSection() {
       text: "A terapia tem sido um espaço para respirar, refletir e reorganizar minha vida. Tenho um problema de obesidade que não é fácil, mas o cuidado, a atenção e as técnicas aplicadas me fazem sentir que estou no caminho certo.",
       category: "Autoestima e Corpo"
     },
-    {
-      name: "T.F.R",
-      text: "Cada sessão tem sido uma oportunidade de me conhecer melhor. Passei por uma perda na minha vida e isso me abalou demais. A forma como sou ouvido e compreendido me dá forças para enfrentar o que antes parecia impossível.",
-      category: "Luto e Superação"
-    },
-    {
-      name: "G.S.A",
-      text: "Eu estava passando por uma fase muito difícil e não sabia por onde começar. Hoje vejo que terapia foi uma das melhores decisões da minha vida. Me sinto mais em paz e preparada para seguir em frente.",
-      category: "Depressão e Recomeço"
-    }
   ]
 
   return (
