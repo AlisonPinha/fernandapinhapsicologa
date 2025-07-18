@@ -25,18 +25,12 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative min-h-[85vh] md:min-h-[80vh] flex items-center justify-center bg-gradient-soft overflow-hidden">
-      {/* Top border line */}
-      <div className="absolute top-0 left-0 w-full h-0.5 bg-ester/20"></div>
-      
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-ester"></div>
         <div className="absolute bottom-40 right-20 w-24 h-24 rounded-full bg-rute"></div>
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-debora"></div>
       </div>
-
-      {/* Bottom border line */}
-      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-ester/20"></div>
 
       <div className="container grid lg:grid-cols-2 gap-6 lg:gap-8 items-center py-4 md:py-6 lg:py-8 px-4 md:px-6">
         {/* Content */}
