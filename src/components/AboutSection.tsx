@@ -43,8 +43,8 @@ export function AboutSection() {
           </AnimatedSection>
 
           {/* Content Side */}
-          <AnimatedSection animation="slide-in-right" delay={200} className="space-y-5 md:space-y-6 order-first lg:order-last">
-            <div className="space-y-5">
+          <AnimatedSection animation="slide-in-right" delay={200} className="space-y-4 md:space-y-6 order-first lg:order-last">
+            <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-ester leading-tight text-center lg:text-left">
                 Então, quem é 
                 <span className="text-rute"> Fernanda</span> 
