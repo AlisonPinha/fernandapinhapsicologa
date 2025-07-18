@@ -115,7 +115,7 @@ export function HeroSection() {
         </AnimatedSection>
 
         {/* Image */}
-        <AnimatedSection animation="slide-in-right" delay={200} className="relative order-first lg:order-last max-w-xs mx-auto lg:max-w-none">
+        <AnimatedSection animation="slide-in-right" delay={200} className="relative order-first lg:order-last max-w-48 mx-auto lg:max-w-sm">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
             <LazyImage 
               src="/lovable-uploads/5e891758-c023-42c3-ab83-6e7a5884c33f.png"
