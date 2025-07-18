@@ -13,10 +13,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-primary"></div>
-              <span className="font-serif text-lg md:text-xl font-bold text-ester">
-                Fernanda Pinha
-              </span>
+              <img 
+                src="/lovable-uploads/5332b9be-61bb-4346-accd-17b7d43dcd47.png" 
+                alt="Fernanda Pinha Psicóloga" 
+                className="h-12 md:h-14 w-auto"
+              />
             </div>
             <p className="text-ester/70 text-xs md:text-sm leading-relaxed">
               Psicóloga especializada em TCC, ajudando mulheres a transformarem 
