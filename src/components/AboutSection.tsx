@@ -11,9 +11,9 @@ export function AboutSection() {
   const { openModal } = useLeadCapture();
 
   return (
-    <section id="sobre" className="py-10 md:py-16 lg:py-20 bg-maria">
+    <section id="sobre" className="py-8 md:py-16 lg:py-20 bg-maria">
       <div className="container px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Image Side */}
           <AnimatedSection animation="slide-in-left" className="relative order-last lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
@@ -99,7 +99,7 @@ export function AboutSection() {
 
             {/* Philosophy */}
             <Card className="border-debora/20 bg-gradient-warm">
-              <CardContent className="p-6">
+              <CardContent className="p-4 md:p-6">
                 <h3 className="text-lg font-semibold text-ester mb-3">Minha missão</h3>
                 <p className="text-ester/80 italic">
                   "Acredito que toda mulher carrega dentro de si a força necessária para se 
