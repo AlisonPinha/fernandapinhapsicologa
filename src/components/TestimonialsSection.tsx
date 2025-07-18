@@ -1,40 +1,28 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote } from "lucide-react"
-import { useLeadCapture } from "@/hooks/useLeadCapture"
-
+import { Card, CardContent } from "@/components/ui/card";
+import { Star, Quote } from "lucide-react";
 export function TestimonialsSection() {
-  const { openModal } = useLeadCapture();
-  
-  const testimonials = [
-    {
-      name: "P.S.S.L",
-      text: "Eu cheguei à terapia cheio de dúvidas e inseguranças, mas encontrei um espaço de acolhimento e compreensão. Aos poucos, estou aprendendo a cuidar de mim de verdade.",
-      category: "Ansiedade e Autoestima"
-    },
-    {
-      name: "A.C.R.R", 
-      text: "Nunca pensei que pudesse me sentir tão à vontade para falar sobre coisas que sempre guardei comigo. As sessões me ajudam a entender quem eu sou e a lidar com minhas emoções de forma mais leve.",
-      category: "Relacionamentos"
-    },
-    {
-      name: "R.M.S.F",
-      text: "A terapia tem sido um espaço para respirar, refletir e reorganizar minha vida. Tenho um problema de obesidade que não é fácil, mas o cuidado, a atenção e as técnicas aplicadas me fazem sentir que estou no caminho certo.",
-      category: "Autoestima e Corpo"
-    },
-    {
-      name: "T.F.R",
-      text: "Cada sessão tem sido uma oportunidade de me conhecer melhor. Passei por uma perda na minha vida e isso me abalou demais. A forma como sou ouvido e compreendido me dá forças para enfrentar o que antes parecia impossível.",
-      category: "Luto e Superação"
-    },
-    {
-      name: "G.S.A",
-      text: "Eu estava passando por uma fase muito difícil e não sabia por onde começar. Hoje vejo que terapia foi uma das melhores decisões da minha vida. Me sinto mais em paz e preparada para seguir em frente.",
-      category: "Depressão e Recomeço"
-    }
-  ]
-
-  return (
-    <section id="depoimentos" className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
+  const testimonials = [{
+    name: "P.S.S.L",
+    text: "Eu cheguei à terapia cheio de dúvidas e inseguranças, mas encontrei um espaço de acolhimento e compreensão. Aos poucos, estou aprendendo a cuidar de mim de verdade.",
+    category: "Ansiedade e Autoestima"
+  }, {
+    name: "A.C.R.R",
+    text: "Nunca pensei que pudesse me sentir tão à vontade para falar sobre coisas que sempre guardei comigo. As sessões me ajudam a entender quem eu sou e a lidar com minhas emoções de forma mais leve.",
+    category: "Relacionamentos"
+  }, {
+    name: "R.M.S.F",
+    text: "A terapia tem sido um espaço para respirar, refletir e reorganizar minha vida. Tenho um problema de obesidade que não é fácil, mas o cuidado, a atenção e as técnicas aplicadas me fazem sentir que estou no caminho certo.",
+    category: "Autoestima e Corpo"
+  }, {
+    name: "T.F.R",
+    text: "Cada sessão tem sido uma oportunidade de me conhecer melhor. Passei por uma perda na minha vida e isso me abalou demais. A forma como sou ouvido e compreendido me dá forças para enfrentar o que antes parecia impossível.",
+    category: "Luto e Superação"
+  }, {
+    name: "G.S.A",
+    text: "Eu estava passando por uma fase muito difícil e não sabia por onde começar. Hoje vejo que terapia foi uma das melhores decisões da minha vida. Me sinto mais em paz e preparada para seguir em frente.",
+    category: "Depressão e Recomeço"
+  }];
+  return <section id="depoimentos" className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
@@ -49,15 +37,12 @@ export function TestimonialsSection() {
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mb-6 md:mb-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 bg-maria/80 backdrop-blur">
+          {testimonials.map((testimonial, index) => <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 bg-maria/80 backdrop-blur">
               <CardContent className="p-5">
                 <div className="space-y-3">
                   {/* Stars */}
                   <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-debora text-debora" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-debora text-debora" />)}
                   </div>
 
                   {/* Quote */}
@@ -75,8 +60,7 @@ export function TestimonialsSection() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
 
           {/* Special CTA Card */}
           <Card className="border-debora/40 bg-gradient-warm hover:shadow-elegant transition-all duration-300 col-span-1 md:col-span-2 lg:col-span-1">
@@ -95,13 +79,10 @@ export function TestimonialsSection() {
                   Que tal dar o primeiro passo para escrever sua transformação?
                 </p>
 
-                <button 
-                  onClick={openModal}
-                  className="inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 bg-ester text-maria rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto"
-                >
+                <a href="https://wa.me/5571981932301?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20minha%20jornada%20de%20transforma%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 bg-ester text-maria rounded-xl font-medium hover:shadow-soft transition-all duration-300 hover:scale-105 text-sm md:text-base w-full sm:w-auto">
                   <span className="hidden sm:inline">Começar minha jornada</span>
                   <span className="sm:hidden">Começar jornada</span>
-                </button>
+                </a>
               </div>
             </CardContent>
           </Card>
@@ -111,7 +92,7 @@ export function TestimonialsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 bg-maria/60 backdrop-blur rounded-2xl p-5 md:p-6">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-ester mb-2">200+</div>
-            <div className="text-sm md:text-base text-ester/70">Vidas transformadas</div>
+            <div className="text-sm md:text-base text-ester/70">100+</div>
           </div>
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-ester mb-2">95%</div>
@@ -119,10 +100,9 @@ export function TestimonialsSection() {
           </div>
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-ester mb-2">4 anos</div>
-            <div className="text-sm md:text-base text-ester/70">Ajudando mulheres</div>
+            <div className="text-sm md:text-base text-ester/70">2 anos</div>
           </div>
         </div>
       </div>
-    </section>
-  )
+    </section>;
 }
