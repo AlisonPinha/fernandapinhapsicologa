@@ -34,7 +34,7 @@ export function HeroSection() {
 
       <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-6 md:py-12 lg:py-16 px-4 md:px-6">
         {/* Content */}
-        <AnimatedSection animation="slide-in-left" className="space-y-5 md:space-y-6 order-last lg:order-first">
+        <AnimatedSection animation="slide-in-left" className="space-y-5 md:space-y-6 order-first lg:order-first">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-debora/20 text-ester">
             <Heart className="h-4 w-4 text-debora" />
