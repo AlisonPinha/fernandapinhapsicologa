@@ -34,7 +34,7 @@ export function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="absolute -bottom-4 -left-4 w-32 bg-maria/90 backdrop-blur border-rute/20">
+            <Card className="absolute -bottom-4 -left-4 w-32 bg-maria/90 backdrop-blur border-rute/20 z-20">
               <CardContent className="p-4 text-center">
                 <div className="text-lg font-bold text-ester">98%</div>
                 <div className="text-xs text-ester/70">Satisfação</div>
