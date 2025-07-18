@@ -29,8 +29,8 @@ export function AnimatedSection({
     <ElementComponent
       ref={ref}
       className={cn(
-        "transition-all duration-600 ease-out",
-        isIntersecting ? `animate-${animation}` : "opacity-0 translate-y-8",
+        "transition-opacity duration-600 ease-out",
+        isIntersecting ? `animate-${animation}` : "opacity-0",
         className
       )}
       style={{ 
