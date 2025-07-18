@@ -51,7 +51,7 @@ export function AboutSection() {
 
               <div className="space-y-4 text-sm md:text-base text-ester/80 leading-relaxed text-center lg:text-left">
                 <p>
-                  <strong className="text-ester">História curta:</strong> Algumas pessoas escolhem a psicologia. 
+                  Algumas pessoas escolhem a psicologia. 
                   Outras são escolhidas pela missão de acolher o que o mundo insiste em quebrar.
                 </p>
                 
