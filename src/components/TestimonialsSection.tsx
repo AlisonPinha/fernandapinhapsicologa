@@ -2,10 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 export function TestimonialsSection() {
   const testimonials = [{
-    name: "P.S.S.L",
-    text: "Eu cheguei à terapia cheio de dúvidas e inseguranças, mas encontrei um espaço de acolhimento e compreensão. Aos poucos, estou aprendendo a cuidar de mim de verdade.",
-    category: "Ansiedade e Autoestima"
-  }, {
     name: "A.C.R.R",
     text: "Nunca pensei que pudesse me sentir tão à vontade para falar sobre coisas que sempre guardei comigo. As sessões me ajudam a entender quem eu sou e a lidar com minhas emoções de forma mais leve.",
     category: "Relacionamentos"
@@ -13,10 +9,6 @@ export function TestimonialsSection() {
     name: "R.M.S.F",
     text: "A terapia tem sido um espaço para respirar, refletir e reorganizar minha vida. Tenho um problema de obesidade que não é fácil, mas o cuidado, a atenção e as técnicas aplicadas me fazem sentir que estou no caminho certo.",
     category: "Autoestima e Corpo"
-  }, {
-    name: "T.F.R",
-    text: "Cada sessão tem sido uma oportunidade de me conhecer melhor. Passei por uma perda na minha vida e isso me abalou demais. A forma como sou ouvido e compreendido me dá forças para enfrentar o que antes parecia impossível.",
-    category: "Luto e Superação"
   }, {
     name: "G.S.A",
     text: "Eu estava passando por uma fase muito difícil e não sabia por onde começar. Hoje vejo que terapia foi uma das melhores decisões da minha vida. Me sinto mais em paz e preparada para seguir em frente.",
