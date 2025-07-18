@@ -108,7 +108,7 @@ export function TestimonialsSection() {
             <div className="text-sm md:text-base text-ester/70">Satisfação nos atendimentos</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-ester mb-2">4 anos</div>
+            <div className="text-2xl md:text-3xl font-bold text-ester mb-2">2 anos</div>
             <div className="text-sm md:text-base text-ester/70">Ajudando mulheres</div>
           </div>
         </div>
