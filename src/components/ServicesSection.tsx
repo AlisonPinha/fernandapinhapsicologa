@@ -1,42 +1,35 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button" 
-import { buttonVariants } from "@/components/ui/button-variants"
-import { cn } from "@/lib/utils"
-import { Heart, Brain, Users, Shield, ArrowRight } from "lucide-react"
-import { useLeadCapture } from "@/hooks/useLeadCapture"
-
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
+import { cn } from "@/lib/utils";
+import { Heart, Brain, Users, Shield, ArrowRight } from "lucide-react";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 export function ServicesSection() {
-  const { openModal } = useLeadCapture();
-
-  const services = [
-    {
-      icon: Heart,
-      title: "Ansiedade e Pânico",
-      description: "Transforme a ansiedade que te paralisa em tranquilidade que te liberta. Aprenda técnicas comprovadas para recuperar o controle da sua vida.",
-      whatsappText: "%20ansiedade%20e%20p%C3%A2nico"
-    },
-    {
-      icon: Users, 
-      title: "Relacionamentos Tóxicos",
-      description: "Saia de ciclos que te machucam e construa vínculos saudáveis. Recupere sua autoestima e aprenda a se relacionar com amor próprio.",
-      whatsappText: "%20relacionamentos%20t%C3%B3xicos"
-    },
-    {
-      icon: Brain,
-      title: "Autoestima e Autoconfiança", 
-      description: "Reconecte-se com sua força interior. Desenvolva uma relação amorosa consigo mesma e conquiste a vida que você merece.",
-      whatsappText: "%20autoestima%20e%20autoconfian%C3%A7a"
-    },
-    {
-      icon: Shield,
-      title: "Depressão e Tristeza Profunda",
-      description: "Da escuridão à luz, uma jornada de reconstrução. Encontre esperança, propósito e alegria genuine novamente.",
-      whatsappText: "%20depress%C3%A3o%20e%20tristeza"
-    }
-  ]
-
-  return (
-    <section id="como-ajudo" className="py-10 md:py-16 lg:py-20 bg-maria">
+  const {
+    openModal
+  } = useLeadCapture();
+  const services = [{
+    icon: Heart,
+    title: "Ansiedade e Pânico",
+    description: "Transforme a ansiedade que te paralisa em tranquilidade que te liberta. Aprenda técnicas comprovadas para recuperar o controle da sua vida.",
+    whatsappText: "%20ansiedade%20e%20p%C3%A2nico"
+  }, {
+    icon: Users,
+    title: "Relacionamentos Tóxicos",
+    description: "Saia de ciclos que te machucam e construa vínculos saudáveis. Recupere sua autoestima e aprenda a se relacionar com amor próprio.",
+    whatsappText: "%20relacionamentos%20t%C3%B3xicos"
+  }, {
+    icon: Brain,
+    title: "Autoestima e Autoconfiança",
+    description: "Reconecte-se com sua força interior. Desenvolva uma relação amorosa consigo mesma e conquiste a vida que você merece.",
+    whatsappText: "%20autoestima%20e%20autoconfian%C3%A7a"
+  }, {
+    icon: Shield,
+    title: "Depressão e Tristeza Profunda",
+    description: "Da escuridão à luz, uma jornada de reconstrução. Encontre esperança, propósito e alegria genuine novamente.",
+    whatsappText: "%20depress%C3%A3o%20e%20tristeza"
+  }];
+  return <section id="como-ajudo" className="py-10 md:py-16 lg:py-20 bg-maria">
       <div className="container px-4 md:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
@@ -51,8 +44,7 @@ export function ServicesSection() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-10 md:mb-12">
-          {services.map((service, index) => (
-            <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur">
+          {services.map((service, index) => <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur">
               <CardContent className="p-5 md:p-6">
                 <div className="flex flex-col sm:flex-row items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-warm flex items-center justify-center">
@@ -63,26 +55,23 @@ export function ServicesSection() {
                     <h3 className="text-lg md:text-xl font-semibold text-ester">{service.title}</h3>
                     <p className="text-sm md:text-base text-ester/70 leading-relaxed">{service.description}</p>
                     
-                    <Button 
-                      onClick={openModal}
-                      className={cn(buttonVariants({ variant: "soft", size: "sm" }), "w-full sm:w-auto")}
-                    >
+                    <Button onClick={openModal} className={cn(buttonVariants({
+                  variant: "soft",
+                  size: "sm"
+                }), "w-full sm:w-auto")}>
                       Quero ajuda com isso
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Process Section */}
         <div className="bg-gradient-soft rounded-3xl p-5 md:p-6 lg:p-8">
           <div className="text-center mb-8">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-ester mb-3 md:mb-4">
-              Como funciona nossa jornada juntas
-            </h3>
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-ester mb-3 md:mb-4">Como funcionará nossa jornada juntas</h3>
             <p className="text-sm md:text-base text-ester/70 max-w-2xl mx-auto">
               Um processo cuidadoso e estruturado para sua transformação acontecer de forma natural e duradoura.
             </p>
@@ -121,6 +110,5 @@ export function ServicesSection() {
           </div>
         </div>
       </div>
-    </section>
-  )
+    </section>;
 }
