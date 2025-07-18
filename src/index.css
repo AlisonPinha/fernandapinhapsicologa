@@ -124,3 +124,17 @@ All colors MUST be HSL.
     padding: 0;
   }
 }
+
+@layer utilities {
+  [data-state="open"] > div {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  [data-state="closed"] > div {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

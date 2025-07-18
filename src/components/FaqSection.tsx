@@ -1,17 +1,13 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
-import { MessageCircle } from "lucide-react"
+import { MessageCircle, ChevronDown } from "lucide-react"
 import { useLeadCapture } from "@/hooks/useLeadCapture"
 
 export function FaqSection() {
   const { openModal } = useLeadCapture();
+  const [openItem, setOpenItem] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -52,6 +48,10 @@ export function FaqSection() {
     }
   ]
 
+  const toggleItem = (index: number) => {
+    setOpenItem(openItem === index ? null : index);
+  };
+
   return (
     <section className="py-10 md:py-16 lg:py-20 bg-gradient-soft">
       <div className="container max-w-4xl px-4 md:px-6">
@@ -68,23 +68,38 @@ export function FaqSection() {
         </div>
 
         {/* FAQ Accordion */}
-        <div className="mb-6 md:mb-8">
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="border border-rute/20 rounded-2xl px-5 bg-maria/60 backdrop-blur"
+        <div className="mb-6 md:mb-8 space-y-3">
+          {faqs.map((faq, index) => (
+            <div 
+              key={index} 
+              className="border border-rute/20 rounded-2xl px-5 bg-maria/60 backdrop-blur"
+            >
+              <button
+                onClick={() => toggleItem(index)}
+                className="flex w-full items-center justify-between py-4 text-left text-ester hover:text-rute font-medium text-sm md:text-base"
               >
-                <AccordionTrigger className="text-left text-ester hover:text-rute [&[data-state=open]]:text-rute font-medium text-sm md:text-base">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-ester/80 leading-relaxed pt-2 text-sm md:text-base">
+                {faq.question}
+                <ChevronDown 
+                  className={cn(
+                    "h-4 w-4 shrink-0 transition-transform duration-200",
+                    openItem === index && "rotate-180"
+                  )} 
+                />
+              </button>
+              <div 
+                className={cn(
+                  "overflow-hidden transition-all duration-300 ease-out",
+                  openItem === index 
+                    ? "max-h-96 opacity-100" 
+                    : "max-h-0 opacity-0"
+                )}
+              >
+                <div className="text-ester/80 leading-relaxed pt-2 pb-4 text-sm md:text-base">
                   {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA Card */}
