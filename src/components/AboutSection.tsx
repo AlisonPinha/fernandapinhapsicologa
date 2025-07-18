@@ -15,7 +15,7 @@ export function AboutSection() {
       <div className="container px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Image Side */}
-          <AnimatedSection animation="slide-in-left" className="relative order-first lg:order-first">
+          <AnimatedSection animation="slide-in-left" className="relative order-last lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
               <LazyImage 
                 src="/lovable-uploads/da809024-c1db-42c6-9e02-7451a68598e6.png"
