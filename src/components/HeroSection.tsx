@@ -24,7 +24,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="inicio" className="relative min-h-[calc(100vh-3.5rem)] md:min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
+    <section id="inicio" className="relative min-h-[70vh] md:min-h-[75vh] flex items-center justify-center bg-gradient-soft overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 rounded-full bg-ester"></div>
@@ -32,7 +32,7 @@ export function HeroSection() {
         <div className="absolute top-60 right-40 w-16 h-16 rounded-full bg-debora"></div>
       </div>
 
-      <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-6 md:py-12 lg:py-16 px-4 md:px-6">
+      <div className="container grid lg:grid-cols-2 gap-4 lg:gap-8 items-center py-3 md:py-6 lg:py-8 px-4 md:px-6">
         {/* Content */}
         <AnimatedSection animation="slide-in-left" className="space-y-5 md:space-y-6 order-last lg:order-first">
           {/* Tag */}
