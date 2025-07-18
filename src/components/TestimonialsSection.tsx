@@ -100,7 +100,7 @@ export function TestimonialsSection() {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 md:gap-6 bg-maria/60 backdrop-blur rounded-2xl p-5 md:p-6">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-ester mb-2">200+</div>
+            <div className="text-2xl md:text-3xl font-bold text-ester mb-2">100+</div>
             <div className="text-sm md:text-base text-ester/70">Vidas transformadas</div>
           </div>
           <div className="text-center">
