@@ -24,7 +24,7 @@ export function FaqSection() {
     },
     {
       question: "Como funciona a terapia online?",
-      answer: "Atendo por videoconferência em ambiente seguro e sigiloso. Você precisa apenas de um local privado e conexão estável. A terapia online é regulamentada pelo CFP e tem a mesma eficácia do atendimento presencial, com a vantagem da comodidade e acessibilidade."
+      answer: "Atendo por videoconferência em ambiente seguro e sigiloso. Você precisa apenas de um local privado e conexão estável. A terapia online é regulamentada pelo Conselho Federal de Psicologia e tem a mesma eficácia do atendimento presencial, com a vantagem da comodidade e acessibilidade."
     },
     {
       question: "Como sei se você é a terapeuta certa para mim?",
