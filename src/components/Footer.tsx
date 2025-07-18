@@ -16,7 +16,7 @@ export function Footer() {
               <img 
                 src="/lovable-uploads/6e7ea10b-0594-4ca3-a154-79efa330f888.png" 
                 alt="Fernanda Pinha Logo" 
-                className="h-24 w-24 object-contain"
+                className="h-8 w-8 object-contain"
               />
               <span className="font-serif text-lg md:text-xl font-bold text-ester">
                 Fernanda Pinha
