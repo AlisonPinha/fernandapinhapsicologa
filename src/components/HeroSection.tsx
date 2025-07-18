@@ -115,12 +115,12 @@ export function HeroSection() {
         </AnimatedSection>
 
         {/* Image */}
-        <AnimatedSection animation="slide-in-right" delay={200} className="relative order-first lg:order-last">
+        <AnimatedSection animation="slide-in-right" delay={200} className="relative order-first lg:order-last max-w-xs mx-auto lg:max-w-none">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
             <LazyImage 
               src="/lovable-uploads/5e891758-c023-42c3-ab83-6e7a5884c33f.png"
               alt="Fernanda - Psicóloga CRP 03/32557"
-              aspectRatio="aspect-[4/5] md:aspect-[3/4]"
+              aspectRatio="aspect-[3/4] md:aspect-[3/4]"
               className="w-full h-full object-cover"
               fallback="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
             />
