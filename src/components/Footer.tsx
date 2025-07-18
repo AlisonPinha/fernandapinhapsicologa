@@ -66,7 +66,7 @@ export function Footer() {
               <li className="text-ester/70">Relacionamentos Tóxicos</li>
               <li className="text-ester/70">Autoestima e Autoconfiança</li>
               <li className="text-ester/70">Depressão e Tristeza</li>
-              <li className="text-ester/70">Terapia para Adolescentes</li>
+              <li className="text-ester/70">Transtornos</li>
             </ul>
           </div>
 
