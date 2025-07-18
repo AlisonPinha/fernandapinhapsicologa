@@ -1,5 +1,8 @@
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
+import { AnimatedSection } from "@/components/ui/animated-section"
+import { LazyImage } from "@/components/ui/lazy-image"
 import { cn } from "@/lib/utils"
 import { Heart, ArrowRight } from "lucide-react"
 import { useLeadCapture } from "@/hooks/useLeadCapture"
@@ -7,10 +10,17 @@ import { trackButtonClick } from "@/lib/gtm"
 
 export function HeroSection() {
   const { openModalWithSource } = useLeadCapture();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleCTAClick = () => {
+  const handleCTAClick = async () => {
+    setIsLoading(true);
     trackButtonClick("Quero minha consulta de acolhimento", "hero_section");
+    
+    // Simula um pequeno delay para melhor UX
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
     openModalWithSource("hero_cta");
+    setIsLoading(false);
   };
 
   return (
@@ -24,7 +34,7 @@ export function HeroSection() {
 
       <div className="container grid lg:grid-cols-2 gap-6 lg:gap-12 items-center py-6 md:py-12 lg:py-16 px-4 md:px-6">
         {/* Content */}
-        <div className="space-y-5 md:space-y-6 order-last lg:order-first">
+        <AnimatedSection animation="slide-in-left" className="space-y-5 md:space-y-6 order-last lg:order-first">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-debora/20 text-ester">
             <Heart className="h-4 w-4 text-debora" />
@@ -71,11 +81,12 @@ export function HeroSection() {
           <div className="flex flex-col gap-3 md:gap-4 items-center lg:items-start">
             <Button 
               onClick={handleCTAClick}
+              loading={isLoading}
               className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
             >
               <span className="hidden sm:inline">Quero minha consulta de acolhimento</span>
               <span className="sm:hidden">Consulta de acolhimento</span>
-              <ArrowRight className="ml-2 h-5 w-5" />
+              {!isLoading && <ArrowRight className="ml-2 h-5 w-5" />}
             </Button>
             
             <a 
@@ -101,24 +112,24 @@ export function HeroSection() {
               <div className="text-xs md:text-sm text-ester/60">Especialista certificada</div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* Image */}
-        <div className="relative order-first lg:order-last">
+        <AnimatedSection animation="slide-in-right" delay={200} className="relative order-first lg:order-last">
           <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
-            <div className="aspect-[4/5] md:aspect-[3/4] overflow-hidden">
-              <img 
-                src="/lovable-uploads/5e891758-c023-42c3-ab83-6e7a5884c33f.png" 
-                alt="Fernanda - Psicóloga CRP 03/32557"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <LazyImage 
+              src="/lovable-uploads/5e891758-c023-42c3-ab83-6e7a5884c33f.png"
+              alt="Fernanda - Psicóloga CRP 03/32557"
+              aspectRatio="aspect-[4/5] md:aspect-[3/4]"
+              className="w-full h-full object-cover"
+              fallback="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+            />
           </div>
           
           {/* Decorative elements */}
           <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-debora/20 -z-10"></div>
           <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-rute/20 -z-10"></div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   )

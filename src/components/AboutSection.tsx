@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button-variants"
+import { AnimatedSection } from "@/components/ui/animated-section"
+import { LazyImage } from "@/components/ui/lazy-image"
 import { cn } from "@/lib/utils"
 import { GraduationCap, Heart, Award, ArrowRight } from "lucide-react"
 import { useLeadCapture } from "@/hooks/useLeadCapture"
@@ -13,15 +15,15 @@ export function AboutSection() {
       <div className="container px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Image Side */}
-          <div className="relative order-first lg:order-first">
+          <AnimatedSection animation="slide-in-left" className="relative order-first lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-elegant">
-              <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src="/lovable-uploads/da809024-c1db-42c6-9e02-7451a68598e6.png" 
-                  alt="Fernanda Pinha - Psicóloga CRP 03/32557"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <LazyImage 
+                src="/lovable-uploads/da809024-c1db-42c6-9e02-7451a68598e6.png"
+                alt="Fernanda - Sobre a psicóloga"
+                aspectRatio="aspect-[4/5]"
+                className="w-full h-full object-cover"
+                fallback="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+              />
             </div>
             
             {/* Decorative cards */}
@@ -38,10 +40,10 @@ export function AboutSection() {
                 <div className="text-xs text-ester/70">Satisfação</div>
               </CardContent>
             </Card>
-          </div>
+          </AnimatedSection>
 
           {/* Content Side */}
-          <div className="space-y-5 md:space-y-6">
+          <AnimatedSection animation="slide-in-right" delay={200} className="space-y-5 md:space-y-6">
             <div className="space-y-5">
               <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-ester leading-tight text-center lg:text-left">
                 Então, quem é 
@@ -125,7 +127,7 @@ export function AboutSection() {
                 <span className="sm:hidden">Como ela pode ajudar</span>
               </a>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

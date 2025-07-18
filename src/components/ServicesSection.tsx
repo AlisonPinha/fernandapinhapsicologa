@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
+import { AnimatedSection } from "@/components/ui/animated-section";
 import { cn } from "@/lib/utils";
 import { Heart, Brain, Users, Shield, ArrowRight } from "lucide-react";
 import { useLeadCapture } from "@/hooks/useLeadCapture";
@@ -32,7 +33,7 @@ export function ServicesSection() {
   return <section id="como-ajudo" className="py-10 md:py-16 lg:py-20 bg-maria">
       <div className="container px-4 md:px-6">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-10 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-serif font-bold text-ester mb-4 md:mb-6 text-center">
             Como posso <span className="text-rute">transformar</span> sua vida
           </h2>
@@ -40,32 +41,41 @@ export function ServicesSection() {
             Cada ferida carrega uma lição. Cada cicatriz, uma história de superação. 
             Juntas, vamos transformar sua dor em força e seu medo em coragem para viver plenamente.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-10 md:mb-12">
-          {services.map((service, index) => <Card key={index} className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur">
-              <CardContent className="p-5 md:p-6">
-                <div className="flex flex-col sm:flex-row items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-warm flex items-center justify-center">
-                    <service.icon className="h-6 w-6 text-ester" />
-                  </div>
-                  
-                  <div className="space-y-3 flex-1 text-center sm:text-left">
-                    <h3 className="text-lg md:text-xl font-semibold text-ester">{service.title}</h3>
-                    <p className="text-sm md:text-base text-ester/70 leading-relaxed">{service.description}</p>
+          {services.map((service, index) => (
+            <AnimatedSection 
+              key={index} 
+              animation="fade-in-up" 
+              delay={index * 100}
+              as="div"
+            >
+              <Card className="border-rute/20 hover:shadow-soft transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur h-full">
+                <CardContent className="p-5 md:p-6">
+                  <div className="flex flex-col sm:flex-row items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-warm flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-ester" />
+                    </div>
                     
-                    <Button onClick={openModal} className={cn(buttonVariants({
-                  variant: "soft",
-                  size: "sm"
-                }), "w-full sm:w-auto")}>
-                      Quero ajuda com isso
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <div className="space-y-3 flex-1 text-center sm:text-left">
+                      <h3 className="text-lg md:text-xl font-semibold text-ester">{service.title}</h3>
+                      <p className="text-sm md:text-base text-ester/70 leading-relaxed">{service.description}</p>
+                      
+                      <Button onClick={openModal} className={cn(buttonVariants({
+                        variant: "soft",
+                        size: "sm"
+                      }), "w-full sm:w-auto")}>
+                        Quero ajuda com isso
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>)}
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          ))}
         </div>
 
         {/* Process Section */}
