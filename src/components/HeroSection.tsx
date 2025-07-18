@@ -3,9 +3,15 @@ import { buttonVariants } from "@/components/ui/button-variants"
 import { cn } from "@/lib/utils"
 import { Heart, ArrowRight } from "lucide-react"
 import { useLeadCapture } from "@/hooks/useLeadCapture"
+import { trackButtonClick } from "@/lib/gtm"
 
 export function HeroSection() {
-  const { openModal } = useLeadCapture();
+  const { openModalWithSource } = useLeadCapture();
+
+  const handleCTAClick = () => {
+    trackButtonClick("Quero minha consulta de acolhimento", "hero_section");
+    openModalWithSource("hero_cta");
+  };
 
   return (
     <section id="inicio" className="relative min-h-[calc(100vh-3.5rem)] md:min-h-[calc(100vh-4rem)] flex items-center justify-center bg-gradient-soft overflow-hidden">
@@ -64,7 +70,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 md:gap-4 items-center lg:items-start">
             <Button 
-              onClick={openModal}
+              onClick={handleCTAClick}
               className={cn(buttonVariants({ variant: "cta", size: "lg" }), "w-full sm:w-auto")}
             >
               <span className="hidden sm:inline">Quero minha consulta de acolhimento</span>
