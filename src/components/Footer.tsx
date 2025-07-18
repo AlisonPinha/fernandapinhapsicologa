@@ -13,7 +13,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-gradient-primary"></div>
+              <img 
+                src="/lovable-uploads/6e7ea10b-0594-4ca3-a154-79efa330f888.png" 
+                alt="Fernanda Pinha Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="font-serif text-lg md:text-xl font-bold text-ester">
                 Fernanda Pinha
               </span>
