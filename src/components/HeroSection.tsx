@@ -98,7 +98,7 @@ export function HeroSection() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4 border-t border-rute/20">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-4 border-t border-rute/20">
             <div className="text-center">
               <div className="text-xl md:text-2xl font-bold text-ester">98%</div>
               <div className="text-xs md:text-sm text-ester/60">Taxa de sucesso</div>
