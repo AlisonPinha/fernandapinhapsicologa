@@ -36,7 +36,7 @@ export function FaqSection() {
     },
     {
       question: "Como é o sigilo profissional?",
-      answer: "Seu sigilo é sagrado. Tudo que conversamos fica entre nós, protegido pelo Código de Ética da Psicologia. Nossas sessões são criptografadas e jamais gravadas. Você pode se sentir completamente segura para compartilhar o que precisar."
+      answer: "Seu sigilo é <strong>prioridade</strong>. Tudo que conversamos fica entre nós, protegido pelo Código de Ética da Psicologia. Nossas sessões são criptografadas e jamais gravadas. Você pode se sentir completamente segura para compartilhar o que precisar."
     },
     {
       question: "Você atende adolescentes?",
