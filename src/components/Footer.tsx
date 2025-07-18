@@ -1,23 +1,18 @@
-import { Heart, Instagram, Linkedin } from "lucide-react"
-import { useLeadCapture } from "@/hooks/useLeadCapture"
-
+import { Heart, Instagram, Linkedin } from "lucide-react";
+import { useLeadCapture } from "@/hooks/useLeadCapture";
 export function Footer() {
-  const { openModal } = useLeadCapture();
-  const whatsappUrl = "https://wa.me/5571981932301"
-  const instagramUrl = "https://www.instagram.com/nandapinha"
-
-  return (
-    <footer id="contato" className="bg-maria border-t border-rute/20">
+  const {
+    openModal
+  } = useLeadCapture();
+  const whatsappUrl = "https://wa.me/5571981932301";
+  const instagramUrl = "https://www.instagram.com/nandapinha";
+  return <footer id="contato" className="bg-maria border-t border-rute/20">
       <div className="container py-10 md:py-12 lg:py-16 px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 mb-6 md:mb-8">
           {/* Brand */}
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/lovable-uploads/6e7ea10b-0594-4ca3-a154-79efa330f888.png" 
-                alt="Fernanda Pinha Logo" 
-                className="h-16 w-16 object-contain"
-              />
+              
               <span className="font-serif text-lg md:text-xl font-bold text-ester">
                 Fernanda Pinha
               </span>
@@ -74,22 +69,14 @@ export function Footer() {
           <div className="space-y-3">
             <h3 className="font-semibold text-ester text-base md:text-lg">Contato</h3>
             <div className="space-y-2">
-              <button 
-                onClick={openModal}
-                className="flex items-center gap-2 text-ester/70 hover:text-rute transition-colors text-sm"
-              >
+              <button onClick={openModal} className="flex items-center gap-2 text-ester/70 hover:text-rute transition-colors text-sm">
                 <div className="w-4 h-4 rounded bg-rute/20 flex items-center justify-center">
                   <span className="text-xs">📱</span>
                 </div>
                 (71) 98193-2301
               </button>
               
-              <a 
-                href={instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-ester/70 hover:text-rute transition-colors text-sm"
-              >
+              <a href={instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ester/70 hover:text-rute transition-colors text-sm">
                 <Instagram className="h-4 w-4" />
                 @nandapinha
               </a>
@@ -118,20 +105,10 @@ export function Footer() {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm">
               Política de Privacidade
             </a>
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm"
-            >
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-ester/60 hover:text-rute transition-colors text-xs md:text-sm">
               Termos de Uso
             </a>
           </div>
@@ -142,6 +119,5 @@ export function Footer() {
           <Heart className="h-6 w-6 text-debora mx-auto" />
         </div>
       </div>
-    </footer>
-  )
+    </footer>;
 }
