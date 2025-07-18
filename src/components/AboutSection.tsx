@@ -27,7 +27,7 @@ export function AboutSection() {
             </div>
             
             {/* Decorative cards */}
-            <Card className="absolute -top-4 -right-4 w-32 bg-maria/90 backdrop-blur border-rute/20">
+            <Card className="absolute -top-4 -right-4 w-32 bg-maria/90 backdrop-blur border-rute/20 z-20">
               <CardContent className="p-4 text-center">
                 <Award className="h-6 w-6 text-debora mx-auto mb-2" />
                 <div className="text-xs text-ester">TCC Especialista</div>
