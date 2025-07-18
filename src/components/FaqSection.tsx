@@ -39,10 +39,6 @@ export function FaqSection() {
       answer: "Seu sigilo é **prioridade**. Tudo que conversamos fica entre nós, protegido pelo Código de Ética da Psicologia. Nossas sessões são criptografadas e jamais gravadas. Você pode se sentir completamente segura para compartilhar o que precisar."
     },
     {
-      question: "Você atende adolescentes?",
-      answer: "Sim, atendo adolescentes a partir dos 14 anos. Trabalho questões como ansiedade escolar, relacionamentos, autoestima, e transições da adolescência. Para menores de 18 anos, preciso da autorização dos responsáveis."
-    },
-    {
       question: "E se eu não me sentir confortável?",
       answer: "A relação terapêutica é baseada na confiança. Se em algum momento você não se sentir à vontade, podemos conversar sobre isso abertamente. O importante é que você se sinta acolhida e segura em nossa jornada juntas."
     },
