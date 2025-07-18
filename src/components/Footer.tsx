@@ -16,7 +16,7 @@ export function Footer() {
               <img 
                 src="/lovable-uploads/5332b9be-61bb-4346-accd-17b7d43dcd47.png" 
                 alt="Fernanda Pinha Psicóloga" 
-                className="h-[336px] md:h-[392px] w-auto"
+                className="h-12 md:h-14 w-auto"
               />
             </div>
             <p className="text-ester/70 text-xs md:text-sm leading-relaxed">
