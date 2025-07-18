@@ -65,7 +65,7 @@ export function AboutSection() {
                 </p>
                 
                 <p>
-                  <strong className="text-rute">Fernanda acredita que cura não acontece apenas no discurso.</strong> 
+                  <strong className="text-rute">Fernanda acredita que cura não acontece apenas no discurso.</strong>{" "}
                   Cura se constrói no detalhe: no silêncio que acolhe, na escuta que respeita, 
                   no olhar que não julga.
                 </p>
