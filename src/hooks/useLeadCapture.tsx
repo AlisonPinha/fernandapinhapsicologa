@@ -35,12 +35,7 @@ export function LeadCaptureProvider({ children }: { children: ReactNode }) {
     trackFormSubmit(data);
     
     // Format the message to send to WhatsApp
-    const message = `Olá, Dra. Fernanda! Acabei de preencher o formulário da sua página.
-
-Nome: ${data.name}
-Motivo: ${data.motivation}
-
-Gostaria de conversar sobre atendimento psicológico.`;
+    const message = `Olá, Dra. Fernanda! Acabei de preencher o formulário da sua página.\n\nNome: ${data.name}\nMotivo: ${data.motivation}\n\nGostaria de conversar sobre atendimento psicológico.`;
 
     // URL encode the message
     const encodedMessage = encodeURIComponent(message);
@@ -51,11 +46,11 @@ Gostaria de conversar sobre atendimento psicológico.`;
     // Track WhatsApp click
     trackWhatsAppClick(data);
     
-    // Open WhatsApp in a new window
-    window.open(whatsappUrl, '_blank');
-    
-    // Close the modal
-    closeModal();
+    // Adiciona um pequeno atraso para garantir que o evento seja processado pelo GTM
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+      closeModal();
+    }, 300);
   };
 
   return (
