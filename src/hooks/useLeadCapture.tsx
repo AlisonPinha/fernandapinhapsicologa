@@ -46,11 +46,9 @@ export function LeadCaptureProvider({ children }: { children: ReactNode }) {
     // Track WhatsApp click
     trackWhatsAppClick(data);
     
-    // Adiciona um pequeno atraso para garantir que o evento seja processado pelo GTM
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank');
-      closeModal();
-    }, 300);
+    // Abrir WhatsApp e fechar modal imediatamente
+    window.open(whatsappUrl, '_blank');
+    closeModal();
   };
 
   return (
